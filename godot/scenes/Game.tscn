@@ -1,0 +1,295 @@
+[gd_scene load_steps=9 format=3 uid="uid://gamemap01"]
+
+[ext_resource type="Script" path="res://scripts/Game.gd" id="1_game"]
+[ext_resource type="Script" path="res://scripts/ui/HUD.gd" id="2_hud"]
+[ext_resource type="Script" path="res://scripts/ui/UnitInfoPanel.gd" id="3_uinfo"]
+[ext_resource type="Script" path="res://scripts/ui/RecruitPanel.gd" id="4_recruit"]
+[ext_resource type="Script" path="res://scripts/ui/MiniMap.gd" id="5_mini"]
+[ext_resource type="Script" path="res://scripts/systems/FogOfWar.gd" id="6_fog"]
+[ext_resource type="Script" path="res://scripts/systems/RecruitmentSystem.gd" id="7_recsys"]
+
+[node name="GameMap" type="Node2D"]
+script = ExtResource("1_game")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(550, 350)
+zoom = Vector2(0.8, 0.8)
+
+[node name="TerrainLayer" type="Node2D" parent="."]
+
+[node name="UnitsContainer" type="Node2D" parent="."]
+
+[node name="MovementOverlay" type="Node2D" parent="."]
+
+[node name="AttackOverlay" type="Node2D" parent="."]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HUD" type="Panel" parent="UI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_hud")
+
+[node name="TopBar" type="HBoxContainer" parent="UI/HUD"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_bottom = 45.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Spacer1" type="Control" parent="UI/HUD/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TurnLabel" type="Label" parent="UI/HUD/TopBar"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Turn 1"
+
+[node name="GoldLabel" type="Label" parent="UI/HUD/TopBar"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_font_sizes/font_size = 20
+text = "Gold: 200"
+
+[node name="PhaseLabel" type="Label" parent="UI/HUD/TopBar"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 18
+text = "Your Turn"
+
+[node name="Spacer2" type="Control" parent="UI/HUD/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BottomBar" type="HBoxContainer" parent="UI/HUD"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -65.0
+grow_horizontal = 0
+grow_vertical = 0
+alignment = 2
+theme_override_constants/separation = 10
+
+[node name="RecruitBtn" type="Button" parent="UI/HUD/BottomBar"]
+layout_mode = 2
+custom_minimum_size = Vector2(130, 50)
+theme_override_font_sizes/font_size = 17
+text = "Recruit"
+
+[node name="EndTurnBtn" type="Button" parent="UI/HUD/BottomBar"]
+layout_mode = 2
+custom_minimum_size = Vector2(160, 50)
+theme_override_font_sizes/font_size = 20
+text = "End Turn"
+
+[node name="UnitInfoPanel" type="PanelContainer" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -210.0
+offset_top = 55.0
+offset_bottom = 280.0
+grow_horizontal = 0
+script = ExtResource("3_uinfo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/UnitInfoPanel"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="UnitName" type="Label" parent="UI/UnitInfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "Unit"
+
+[node name="HPLabel" type="Label" parent="UI/UnitInfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "HP: 100/100"
+
+[node name="ATKLabel" type="Label" parent="UI/UnitInfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "ATK: 30"
+
+[node name="DEFLabel" type="Label" parent="UI/UnitInfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "DEF: 15"
+
+[node name="MoveLabel" type="Label" parent="UI/UnitInfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Move: Yes"
+
+[node name="RangeLabel" type="Label" parent="UI/UnitInfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Range: 1"
+
+[node name="TerrainLabel" type="Label" parent="UI/UnitInfoPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Terrain: Plains"
+
+[node name="RecruitPanel" type="PanelContainer" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -320.0
+offset_right = 150.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("4_recruit")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/RecruitPanel"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Title" type="Label" parent="UI/RecruitPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+text = "Recruit Unit"
+
+[node name="UnitList" type="VBoxContainer" parent="UI/RecruitPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="CloseBtn" type="Button" parent="UI/RecruitPanel/VBoxContainer"]
+layout_mode = 2
+text = "Close"
+
+[node name="MiniMap" type="TextureRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -190.0
+offset_top = -130.0
+custom_minimum_size = Vector2(180, 120)
+stretch_mode = 1
+script = ExtResource("5_mini")
+
+[node name="TurnBanner" type="CenterContainer" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -40.0
+offset_right = 200.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BannerLabel" type="Label" parent="UI/TurnBanner"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 36
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "Your Turn"
+
+[node name="GameOverPanel" type="CenterContainer" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="UI/GameOverPanel"]
+layout_mode = 2
+size = Vector2(420, 220)
+
+[node name="VBox" type="VBoxContainer" parent="UI/GameOverPanel/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -90.0
+offset_right = 180.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="ResultLabel" type="Label" parent="UI/GameOverPanel/Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+text = "Victory!"
+
+[node name="RestartBtn" type="Button" parent="UI/GameOverPanel/Panel/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(180, 55)
+theme_override_font_sizes/font_size = 20
+text = "Play Again"
+
+[node name="ToastContainer" type="CenterContainer" parent="UI/HUD"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ToastLabel" type="Label" parent="UI/HUD/ToastContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.8, 1)
+theme_override_font_sizes/font_size = 17
+horizontal_alignment = 1
+text = ""
+
+[node name="ToastTimer" type="Timer" parent="UI/HUD/ToastContainer"]
+wait_time = 2.5
+one_shot = true
+
+[node name="RecruitmentSystem" type="Node" parent="."]
+script = ExtResource("7_recsys")

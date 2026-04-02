@@ -1,0 +1,99 @@
+[gd_scene load_steps=2 format=3 uid="uid://mainmenu01"]
+
+[ext_resource type="Texture2D" path="res://assets/banner.png" id="1_banner"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.08, 0.08, 0.12, 1)
+
+[node name="Banner" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 50.0
+offset_right = 250.0
+offset_bottom = 350.0
+texture = ExtResource("1_banner")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 370.0
+offset_bottom = 430.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_font_sizes/font_size = 42
+horizontal_alignment = 1
+text = "WORLD CONQUEROR"
+
+[node name="SubtitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 430.0
+offset_bottom = 465.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+text = "Turn-Based Strategy"
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -240.0
+offset_right = 120.0
+theme_override_constants/separation = 15
+
+[node name="PlayBtn" type="Button" parent="./ButtonsContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(240, 60)
+theme_override_font_sizes/font_size = 22
+text = "Play Game"
+
+[node name="EasyBtn" type="Button" parent="./ButtonsContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(240, 45)
+theme_override_font_sizes/font_size = 18
+text = "Easy"
+
+[node name="MediumBtn" type="Button" parent="./ButtonsContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(240, 45)
+theme_override_font_sizes/font_size = 18
+text = "Medium"
+
+[node name="HardBtn" type="Button" parent="./ButtonsContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(240, 45)
+theme_override_font_sizes/font_size = 18
+text = "Hard"
+
+[node name="QuitBtn" type="Button" parent="./ButtonsContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(240, 45)
+theme_override_font_sizes/font_size = 18
+text = "Quit"
