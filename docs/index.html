@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Conqueror Strategy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f1923; color: #e0e0e0; }
+        .hero { position: relative; height: 70vh; min-height: 400px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .hero img { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; position: absolute; top: 0; left: 0; }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 2rem; }
+        .hero h1 { font-size: 3.5rem; color: #fff; text-shadow: 0 4px 20px rgba(0,0,0,0.8); margin-bottom: 0.5rem; }
+        .hero p { font-size: 1.3rem; color: #b0c4de; margin-bottom: 2rem; }
+        .cta { display: inline-block; padding: 14px 36px; background: #2E86AB; color: white; text-decoration: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; transition: all 0.3s; }
+        .cta:hover { background: #1B6F93; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(46,134,171,0.4); }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1100px; margin: 4rem auto; padding: 0 2rem; }
+        .feature-card { background: linear-gradient(135deg, #1a2a3a, #1e3246); border-radius: 12px; padding: 2rem; border: 1px solid rgba(46,134,171,0.2); transition: all 0.3s; }
+        .feature-card:hover { transform: translateY(-4px); border-color: rgba(46,134,171,0.5); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+        .feature-card h3 { color: #2E86AB; font-size: 1.2rem; margin-bottom: 0.8rem; }
+        .feature-card p { color: #a0b0c0; line-height: 1.6; font-size: 0.95rem; }
+        .section { max-width: 800px; margin: 3rem auto; padding: 0 2rem; }
+        .section h2 { color: #2E86AB; font-size: 2rem; margin-bottom: 1rem; text-align: center; }
+        .section p { line-height: 1.8; color: #b0c0d0; }
+        .units-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .unit-card { background: rgba(30,50,70,0.8); border-radius: 10px; padding: 1.5rem; text-align: center; border: 1px solid rgba(46,134,171,0.15); }
+        .unit-card h4 { color: #fff; margin-bottom: 0.5rem; }
+        .unit-card .stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05); color: #a0b0c0; font-size: 0.85rem; }
+        .badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; }
+        .badge-green { background: rgba(40,167,69,0.2); color: #28a745; }
+        .badge-blue { background: rgba(46,134,171,0.2); color: #2E86AB; }
+        .badge-orange { background: rgba(255,165,0,0.2); color: #ffa500; }
+        footer { text-align: center; padding: 2rem; color: #607080; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 3rem; }
+        footer a { color: #2E86AB; text-decoration: none; }
+        .play-section { background: linear-gradient(135deg, #1a2a3a, #0f1923); border-radius: 16px; padding: 2.5rem; max-width: 700px; margin: 3rem auto; border: 1px solid rgba(46,134,171,0.3); }
+        .play-step { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; }
+        .play-num { background: #2E86AB; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
+        .play-step p { color: #b0c0d0; line-height: 1.5; }
+        .play-step strong { color: #fff; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <img src="../assets/banner.png" alt="World Conqueror Strategy Banner">
+        <div class="hero-content">
+            <h1>World Conqueror Strategy</h1>
+            <p>Turn-Based Strategy Game | Built with GDevelop</p>
+            <a href="https://github.com/yayass3r/World-Conqueror-Strategy" class="cta" target="_blank">View on GitHub</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Command. Conquer. Control.</h2>
+        <p>
+            World Conqueror Strategy is a turn-based strategy game where you lead armies across a tactical map.
+            Deploy infantry, tanks, and aircraft. Capture cities to fund your war machine. Outsmart the AI opponent
+            through superior tactics and terrain mastery. Every decision matters - every turn is a battle of wits.
+        </p>
+    </div>
+
+    <div class="features">
+        <div class="feature-card">
+            <h3>Tactical Combat</h3>
+            <p>Deep combat system with damage calculations, terrain bonuses, critical hits, and counter-attacks. Position your units wisely for maximum advantage.</p>
+        </div>
+        <div class="feature-card">
+            <h3>3 Unique Units</h3>
+            <p>Infantry for versatile combat, Tanks for devastating assaults, and Aircraft for unmatched mobility and range. Each fills a critical role.</p>
+        </div>
+        <div class="feature-card">
+            <h3>6 Terrain Types</h3>
+            <p>Plains, Cities, Mountains, Deserts, Forests, and Seas. Each terrain type affects movement, defense, and strategy differently.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Smart AI Opponent</h3>
+            <p>Face an AI that pursues your units, exploits terrain, and attacks when it has the advantage. No two games play the same.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Economy System</h3>
+            <p>Capture cities to generate gold. Control the map to control the economy. Strategic expansion is the path to victory.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Mobile-First Design</h3>
+            <p>Built for touch screens with large tap targets, clean UI, and optimized performance on phones and tablets.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Your Army</h2>
+        <div class="units-grid">
+            <div class="unit-card">
+                <h4>Infantry <span class="badge badge-green">VERSATILE</span></h4>
+                <div class="stat"><span>HP</span><span>100</span></div>
+                <div class="stat"><span>ATK</span><span>20</span></div>
+                <div class="stat"><span>DEF</span><span>5</span></div>
+                <div class="stat"><span>MOV</span><span>3</span></div>
+                <div class="stat"><span>Range</span><span>1</span></div>
+            </div>
+            <div class="unit-card">
+                <h4>Tank <span class="badge badge-blue">HEAVY</span></h4>
+                <div class="stat"><span>HP</span><span>200</span></div>
+                <div class="stat"><span>ATK</span><span>40</span></div>
+                <div class="stat"><span>DEF</span><span>15</span></div>
+                <div class="stat"><span>MOV</span><span>2</span></div>
+                <div class="stat"><span>Range</span><span>1</span></div>
+            </div>
+            <div class="unit-card">
+                <h4>Aircraft <span class="badge badge-orange">AIR</span></h4>
+                <div class="stat"><span>HP</span><span>80</span></div>
+                <div class="stat"><span>ATK</span><span>50</span></div>
+                <div class="stat"><span>DEF</span><span>2</span></div>
+                <div class="stat"><span>MOV</span><span>4</span></div>
+                <div class="stat"><span>Range</span><span>2</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="play-section">
+        <h2 style="text-align:center; margin-bottom:1.5rem;">Play Now</h2>
+        <div class="play-step">
+            <div class="play-num">1</div>
+            <p><strong>Open GDevelop</strong> at <a href="https://editor.gdevelop.io" style="color:#2E86AB">editor.gdevelop.io</a></p>
+        </div>
+        <div class="play-step">
+            <div class="play-num">2</div>
+            <p><strong>Import Project</strong> - New Project > Import > Upload <code>WorldConquerorStrategy.json</code></p>
+        </div>
+        <div class="play-step">
+            <div class="play-num">3</div>
+            <p><strong>Click Preview</strong> - The game runs immediately in your browser!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>World Conqueror Strategy &copy; 2026 | <a href="https://github.com/yayass3r/World-Conqueror-Strategy">GitHub</a> | Built with <a href="https://gdevelop.io">GDevelop</a></p>
+    </footer>
+</body>
+</html>
