@@ -1,0 +1,6383 @@
+{
+  "firstLayout": "MainGame",
+  "layouts": [
+    {
+      "name": "MainGame",
+      "r": 42,
+      "g": 45,
+      "b": 62,
+      "objects": [
+        {
+          "type": "Sprite",
+          "name": "Region",
+          "variables": [
+            {
+              "name": "RegionID",
+              "type": "Number",
+              "value": "0"
+            },
+            {
+              "name": "Owner",
+              "type": "Number",
+              "value": "0"
+            },
+            {
+              "name": "TerrainType",
+              "type": "String",
+              "value": "plains"
+            },
+            {
+              "name": "GoldPerTurn",
+              "type": "Number",
+              "value": "0"
+            },
+            {
+              "name": "DefenseBonus",
+              "type": "Number",
+              "value": "0"
+            },
+            {
+              "name": "MoveCost",
+              "type": "Number",
+              "value": "1"
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "directions": [
+                {
+                  "id": "default",
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "originPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "points": [
+                        {
+                          "name": "Anchor",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "texture": ""
+                    }
+                  ],
+                  "looping": false,
+                  "timeBetweenFrames": 0.08
+                }
+              ],
+              "name": "default",
+              "playOnlyOnce": false
+            }
+          ],
+          "stayOnScreen": false,
+          "pauseTheMusicWhenPlaying": false
+        },
+        {
+          "type": "Sprite",
+          "name": "Infantry",
+          "variables": [
+            {
+              "name": "Owner",
+              "type": "Number",
+              "value": "1"
+            },
+            {
+              "name": "Health",
+              "type": "Number",
+              "value": "100"
+            },
+            {
+              "name": "MaxHealth",
+              "type": "Number",
+              "value": "100"
+            },
+            {
+              "name": "Attack",
+              "type": "Number",
+              "value": "20"
+            },
+            {
+              "name": "Defense",
+              "type": "Number",
+              "value": "5"
+            },
+            {
+              "name": "MovementPoints",
+              "type": "Number",
+              "value": "3"
+            },
+            {
+              "name": "MovementLeft",
+              "type": "Number",
+              "value": "3"
+            },
+            {
+              "name": "HasMoved",
+              "type": "Number",
+              "value": "0"
+            },
+            {
+              "name": "HasAttacked",
+              "type": "Number",
+              "value": "0"
+            },
+            {
+              "name": "UnitType",
+              "type": "String",
+              "value": "infantry"
+            },
+            {
+              "name": "AttackRange",
+              "type": "Number",
+              "value": "1"
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "directions": [
+                {
+                  "id": "default",
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "originPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "points": [
+                        {
+                          "name": "Anchor",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "texture": ""
+                    }
+                  ],
+                  "looping": false,
+                  "timeBetweenFrames": 0.08
+                }
+              ],
+              "name": "default",
+              "playOnlyOnce": false
+            }
+          ],
+          "stayOnScreen": false,
+          "pauseTheMusicWhenPlaying": false
+        },
+        {
+          "type": "Sprite",
+          "name": "Tank",
+          "variables": [
+            {
+              "name": "Owner",
+              "type": "Number",
+              "value": "1"
+            },
+            {
+              "name": "Health",
+              "type": "Number",
+              "value": "200"
+            },
+            {
+              "name": "MaxHealth",
+              "type": "Number",
+              "value": "200"
+            },
+            {
+              "name": "Attack",
+              "type": "Number",
+              "value": "40"
+            },
+            {
+              "name": "Defense",
+              "type": "Number",
+              "value": "15"
+            },
+            {
+              "name": "MovementPoints",
+              "type": "Number",
+              "value": "2"
+            },
+            {
+              "name": "MovementLeft",
+              "type": "Number",
+              "value": "2"
+            },
+            {
+              "name": "HasMoved",
+              "type": "Number",
+              "value": "0"
+            },
+            {
+              "name": "HasAttacked",
+              "type": "Number",
+              "value": "0"
+            },
+            {
+              "name": "UnitType",
+              "type": "String",
+              "value": "tank"
+            },
+            {
+              "name": "AttackRange",
+              "type": "Number",
+              "value": "1"
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "directions": [
+                {
+                  "id": "default",
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "originPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "points": [
+                        {
+                          "name": "Anchor",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "texture": ""
+                    }
+                  ],
+                  "looping": false,
+                  "timeBetweenFrames": 0.08
+                }
+              ],
+              "name": "default",
+              "playOnlyOnce": false
+            }
+          ],
+          "stayOnScreen": false,
+          "pauseTheMusicWhenPlaying": false
+        },
+        {
+          "type": "Sprite",
+          "name": "Aircraft",
+          "variables": [
+            {
+              "name": "Owner",
+              "type": "Number",
+              "value": "1"
+            },
+            {
+              "name": "Health",
+              "type": "Number",
+              "value": "80"
+            },
+            {
+              "name": "MaxHealth",
+              "type": "Number",
+              "value": "80"
+            },
+            {
+              "name": "Attack",
+              "type": "Number",
+              "value": "50"
+            },
+            {
+              "name": "Defense",
+              "type": "Number",
+              "value": "2"
+            },
+            {
+              "name": "MovementPoints",
+              "type": "Number",
+              "value": "4"
+            },
+            {
+              "name": "MovementLeft",
+              "type": "Number",
+              "value": "4"
+            },
+            {
+              "name": "HasMoved",
+              "type": "Number",
+              "value": "0"
+            },
+            {
+              "name": "HasAttacked",
+              "type": "Number",
+              "value": "0"
+            },
+            {
+              "name": "UnitType",
+              "type": "String",
+              "value": "aircraft"
+            },
+            {
+              "name": "AttackRange",
+              "type": "Number",
+              "value": "2"
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "directions": [
+                {
+                  "id": "default",
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "originPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "points": [
+                        {
+                          "name": "Anchor",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "texture": ""
+                    }
+                  ],
+                  "looping": false,
+                  "timeBetweenFrames": 0.08
+                }
+              ],
+              "name": "default",
+              "playOnlyOnce": false
+            }
+          ],
+          "stayOnScreen": false,
+          "pauseTheMusicWhenPlaying": false
+        },
+        {
+          "type": "Sprite",
+          "name": "SelectionMarker",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "directions": [
+                {
+                  "id": "default",
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "originPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "points": [
+                        {
+                          "name": "Anchor",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "texture": ""
+                    }
+                  ],
+                  "looping": false,
+                  "timeBetweenFrames": 0.08
+                }
+              ],
+              "name": "default",
+              "playOnlyOnce": false
+            }
+          ],
+          "stayOnScreen": false,
+          "pauseTheMusicWhenPlaying": false
+        },
+        {
+          "type": "Sprite",
+          "name": "MoveIndicator",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "directions": [
+                {
+                  "id": "default",
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "originPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "points": [
+                        {
+                          "name": "Anchor",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "texture": ""
+                    }
+                  ],
+                  "looping": false,
+                  "timeBetweenFrames": 0.08
+                }
+              ],
+              "name": "default",
+              "playOnlyOnce": false
+            }
+          ],
+          "stayOnScreen": false,
+          "pauseTheMusicWhenPlaying": false
+        },
+        {
+          "type": "Sprite",
+          "name": "AttackIndicator",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "directions": [
+                {
+                  "id": "default",
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "originPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "points": [
+                        {
+                          "name": "Anchor",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "texture": ""
+                    }
+                  ],
+                  "looping": false,
+                  "timeBetweenFrames": 0.08
+                }
+              ],
+              "name": "default",
+              "playOnlyOnce": false
+            }
+          ],
+          "stayOnScreen": false,
+          "pauseTheMusicWhenPlaying": false
+        },
+        {
+          "type": "TextObject::TextObject",
+          "name": "DamageText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "font": "Arial",
+          "fontSize": 18,
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "opacity": 255
+        },
+        {
+          "type": "TextObject::TextObject",
+          "name": "GoldDisplay",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "font": "Arial",
+          "fontSize": 20,
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "opacity": 255
+        },
+        {
+          "type": "TextObject::TextObject",
+          "name": "TurnDisplay",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "font": "Arial",
+          "fontSize": 20,
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "opacity": 255
+        },
+        {
+          "type": "TextObject::TextObject",
+          "name": "PhaseDisplay",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "font": "Arial",
+          "fontSize": 18,
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "opacity": 255
+        },
+        {
+          "type": "Sprite",
+          "name": "EndTurnButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "directions": [
+                {
+                  "id": "default",
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "originPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "points": [
+                        {
+                          "name": "Anchor",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "texture": ""
+                    }
+                  ],
+                  "looping": false,
+                  "timeBetweenFrames": 0.08
+                }
+              ],
+              "name": "default",
+              "playOnlyOnce": false
+            }
+          ],
+          "stayOnScreen": false,
+          "pauseTheMusicWhenPlaying": false
+        },
+        {
+          "type": "Sprite",
+          "name": "UnitInfoPanel",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "directions": [
+                {
+                  "id": "default",
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "originPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "points": [
+                        {
+                          "name": "Anchor",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "texture": ""
+                    }
+                  ],
+                  "looping": false,
+                  "timeBetweenFrames": 0.08
+                }
+              ],
+              "name": "default",
+              "playOnlyOnce": false
+            }
+          ],
+          "stayOnScreen": false,
+          "pauseTheMusicWhenPlaying": false
+        },
+        {
+          "type": "TextObject::TextObject",
+          "name": "UnitInfoName",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "font": "Arial",
+          "fontSize": 18,
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "opacity": 255
+        },
+        {
+          "type": "TextObject::TextObject",
+          "name": "UnitInfoHP",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "font": "Arial",
+          "fontSize": 16,
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "opacity": 255
+        },
+        {
+          "type": "TextObject::TextObject",
+          "name": "UnitInfoATK",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "font": "Arial",
+          "fontSize": 16,
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "opacity": 255
+        },
+        {
+          "type": "TextObject::TextObject",
+          "name": "UnitInfoMOV",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "font": "Arial",
+          "fontSize": 16,
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255,
+            "a": 255
+          },
+          "opacity": 255
+        },
+        {
+          "type": "Sprite",
+          "name": "HealthBarBG",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "directions": [
+                {
+                  "id": "default",
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "originPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "points": [
+                        {
+                          "name": "Anchor",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "texture": ""
+                    }
+                  ],
+                  "looping": false,
+                  "timeBetweenFrames": 0.08
+                }
+              ],
+              "name": "default",
+              "playOnlyOnce": false
+            }
+          ],
+          "stayOnScreen": false,
+          "pauseTheMusicWhenPlaying": false
+        },
+        {
+          "type": "Sprite",
+          "name": "HealthBarFG",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "directions": [
+                {
+                  "id": "default",
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "originPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "points": [
+                        {
+                          "name": "Anchor",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "texture": ""
+                    }
+                  ],
+                  "looping": false,
+                  "timeBetweenFrames": 0.08
+                }
+              ],
+              "name": "default",
+              "playOnlyOnce": false
+            }
+          ],
+          "stayOnScreen": false,
+          "pauseTheMusicWhenPlaying": false
+        },
+        {
+          "type": "Sprite",
+          "name": "AttackEffect",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "directions": [
+                {
+                  "id": "default",
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "originPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "points": [
+                        {
+                          "name": "Anchor",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "texture": ""
+                    }
+                  ],
+                  "looping": false,
+                  "timeBetweenFrames": 0.08
+                }
+              ],
+              "name": "default",
+              "playOnlyOnce": false
+            }
+          ],
+          "stayOnScreen": false,
+          "pauseTheMusicWhenPlaying": false
+        },
+        {
+          "type": "Sprite",
+          "name": "ExplosionEffect",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "directions": [
+                {
+                  "id": "default",
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "originPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "points": [
+                        {
+                          "name": "Anchor",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "texture": ""
+                    }
+                  ],
+                  "looping": false,
+                  "timeBetweenFrames": 0.08
+                }
+              ],
+              "name": "default",
+              "playOnlyOnce": false
+            }
+          ],
+          "stayOnScreen": false,
+          "pauseTheMusicWhenPlaying": false
+        },
+        {
+          "type": "Sprite",
+          "name": "GameOverlay",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "directions": [
+                {
+                  "id": "default",
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "originPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "points": [
+                        {
+                          "name": "Anchor",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "texture": ""
+                    }
+                  ],
+                  "looping": false,
+                  "timeBetweenFrames": 0.08
+                }
+              ],
+              "name": "default",
+              "playOnlyOnce": false
+            }
+          ],
+          "stayOnScreen": false,
+          "pauseTheMusicWhenPlaying": false
+        }
+      ],
+      "instances": [
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 0,
+          "y": 0,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "0"
+            },
+            {
+              "name": "Owner",
+              "value": "0"
+            },
+            {
+              "name": "TerrainType",
+              "value": "plains"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "0"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "0"
+            },
+            {
+              "name": "MoveCost",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 200,
+          "y": 0,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "1"
+            },
+            {
+              "name": "Owner",
+              "value": "1"
+            },
+            {
+              "name": "TerrainType",
+              "value": "city"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "20"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "20"
+            },
+            {
+              "name": "MoveCost",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 400,
+          "y": 0,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "2"
+            },
+            {
+              "name": "Owner",
+              "value": "0"
+            },
+            {
+              "name": "TerrainType",
+              "value": "plains"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "0"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "0"
+            },
+            {
+              "name": "MoveCost",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 600,
+          "y": 0,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "3"
+            },
+            {
+              "name": "Owner",
+              "value": "0"
+            },
+            {
+              "name": "TerrainType",
+              "value": "desert"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "0"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "-10"
+            },
+            {
+              "name": "MoveCost",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 800,
+          "y": 0,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "4"
+            },
+            {
+              "name": "Owner",
+              "value": "0"
+            },
+            {
+              "name": "TerrainType",
+              "value": "mountain"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "5"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "30"
+            },
+            {
+              "name": "MoveCost",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 0,
+          "y": 150,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "5"
+            },
+            {
+              "name": "Owner",
+              "value": "0"
+            },
+            {
+              "name": "TerrainType",
+              "value": "forest"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "0"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "15"
+            },
+            {
+              "name": "MoveCost",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 200,
+          "y": 150,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "6"
+            },
+            {
+              "name": "Owner",
+              "value": "1"
+            },
+            {
+              "name": "TerrainType",
+              "value": "plains"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "0"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "0"
+            },
+            {
+              "name": "MoveCost",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 400,
+          "y": 150,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "7"
+            },
+            {
+              "name": "Owner",
+              "value": "0"
+            },
+            {
+              "name": "TerrainType",
+              "value": "city"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "20"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "20"
+            },
+            {
+              "name": "MoveCost",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 600,
+          "y": 150,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "8"
+            },
+            {
+              "name": "Owner",
+              "value": "0"
+            },
+            {
+              "name": "TerrainType",
+              "value": "plains"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "0"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "0"
+            },
+            {
+              "name": "MoveCost",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 800,
+          "y": 150,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "9"
+            },
+            {
+              "name": "Owner",
+              "value": "0"
+            },
+            {
+              "name": "TerrainType",
+              "value": "plains"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "0"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "0"
+            },
+            {
+              "name": "MoveCost",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 0,
+          "y": 300,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "10"
+            },
+            {
+              "name": "Owner",
+              "value": "0"
+            },
+            {
+              "name": "TerrainType",
+              "value": "plains"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "0"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "0"
+            },
+            {
+              "name": "MoveCost",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 200,
+          "y": 300,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "11"
+            },
+            {
+              "name": "Owner",
+              "value": "0"
+            },
+            {
+              "name": "TerrainType",
+              "value": "desert"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "0"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "-10"
+            },
+            {
+              "name": "MoveCost",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 400,
+          "y": 300,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "12"
+            },
+            {
+              "name": "Owner",
+              "value": "0"
+            },
+            {
+              "name": "TerrainType",
+              "value": "plains"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "0"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "0"
+            },
+            {
+              "name": "MoveCost",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 600,
+          "y": 300,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "13"
+            },
+            {
+              "name": "Owner",
+              "value": "0"
+            },
+            {
+              "name": "TerrainType",
+              "value": "sea"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "0"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "-20"
+            },
+            {
+              "name": "MoveCost",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 800,
+          "y": 300,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "14"
+            },
+            {
+              "name": "Owner",
+              "value": "2"
+            },
+            {
+              "name": "TerrainType",
+              "value": "city"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "20"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "20"
+            },
+            {
+              "name": "MoveCost",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 0,
+          "y": 450,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "15"
+            },
+            {
+              "name": "Owner",
+              "value": "0"
+            },
+            {
+              "name": "TerrainType",
+              "value": "mountain"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "5"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "30"
+            },
+            {
+              "name": "MoveCost",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 200,
+          "y": 450,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "16"
+            },
+            {
+              "name": "Owner",
+              "value": "0"
+            },
+            {
+              "name": "TerrainType",
+              "value": "plains"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "0"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "0"
+            },
+            {
+              "name": "MoveCost",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 400,
+          "y": 450,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "17"
+            },
+            {
+              "name": "Owner",
+              "value": "0"
+            },
+            {
+              "name": "TerrainType",
+              "value": "plains"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "0"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "0"
+            },
+            {
+              "name": "MoveCost",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 600,
+          "y": 450,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "18"
+            },
+            {
+              "name": "Owner",
+              "value": "2"
+            },
+            {
+              "name": "TerrainType",
+              "value": "plains"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "0"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "0"
+            },
+            {
+              "name": "MoveCost",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Region",
+          "x": 800,
+          "y": 450,
+          "zOrder": 0,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 200,
+          "height": 150,
+          "locked": false,
+          "variables": [
+            {
+              "name": "RegionID",
+              "value": "19"
+            },
+            {
+              "name": "Owner",
+              "value": "2"
+            },
+            {
+              "name": "TerrainType",
+              "value": "forest"
+            },
+            {
+              "name": "GoldPerTurn",
+              "value": "0"
+            },
+            {
+              "name": "DefenseBonus",
+              "value": "15"
+            },
+            {
+              "name": "MoveCost",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Infantry",
+          "x": 250,
+          "y": 50,
+          "zOrder": 1,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "locked": false,
+          "variables": [
+            {
+              "name": "Owner",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Tank",
+          "x": 210,
+          "y": 100,
+          "zOrder": 1,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "locked": false,
+          "variables": [
+            {
+              "name": "Owner",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Infantry",
+          "x": 300,
+          "y": 80,
+          "zOrder": 1,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "locked": false,
+          "variables": [
+            {
+              "name": "Owner",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Infantry",
+          "x": 850,
+          "y": 350,
+          "zOrder": 1,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "locked": false,
+          "variables": [
+            {
+              "name": "Owner",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Tank",
+          "x": 810,
+          "y": 400,
+          "zOrder": 1,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "locked": false,
+          "variables": [
+            {
+              "name": "Owner",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "Infantry",
+          "x": 900,
+          "y": 380,
+          "zOrder": 1,
+          "layer": "Base",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "locked": false,
+          "variables": [
+            {
+              "name": "Owner",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "persistentUuid": "",
+          "name": "GoldDisplay",
+          "x": 1050,
+          "y": 10,
+          "zOrder": 100,
+          "layer": "UI",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "locked": false
+        },
+        {
+          "persistentUuid": "",
+          "name": "TurnDisplay",
+          "x": 10,
+          "y": 10,
+          "zOrder": 100,
+          "layer": "UI",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "locked": false
+        },
+        {
+          "persistentUuid": "",
+          "name": "PhaseDisplay",
+          "x": 10,
+          "y": 50,
+          "zOrder": 100,
+          "layer": "UI",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "locked": false
+        },
+        {
+          "persistentUuid": "",
+          "name": "EndTurnButton",
+          "x": 1050,
+          "y": 60,
+          "zOrder": 100,
+          "layer": "UI",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 180,
+          "height": 50,
+          "locked": false
+        },
+        {
+          "persistentUuid": "",
+          "name": "UnitInfoPanel",
+          "x": 1020,
+          "y": 200,
+          "zOrder": 99,
+          "layer": "UI",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": true,
+          "width": 240,
+          "height": 300,
+          "locked": false
+        },
+        {
+          "persistentUuid": "",
+          "name": "UnitInfoName",
+          "x": 1030,
+          "y": 210,
+          "zOrder": 101,
+          "layer": "UI",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "locked": false
+        },
+        {
+          "persistentUuid": "",
+          "name": "UnitInfoHP",
+          "x": 1030,
+          "y": 250,
+          "zOrder": 101,
+          "layer": "UI",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "locked": false
+        },
+        {
+          "persistentUuid": "",
+          "name": "UnitInfoATK",
+          "x": 1030,
+          "y": 280,
+          "zOrder": 101,
+          "layer": "UI",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "locked": false
+        },
+        {
+          "persistentUuid": "",
+          "name": "UnitInfoMOV",
+          "x": 1030,
+          "y": 310,
+          "zOrder": 101,
+          "layer": "UI",
+          "angle": 0,
+          "zoomX": 1,
+          "zoomY": 1,
+          "customSize": false,
+          "width": 0,
+          "height": 0,
+          "locked": false
+        }
+      ],
+      "variables": [
+        {
+          "name": "PlayerTurn",
+          "type": "Number",
+          "value": "1"
+        },
+        {
+          "name": "Gold",
+          "type": "Number",
+          "value": "200"
+        },
+        {
+          "name": "AIGold",
+          "type": "Number",
+          "value": "200"
+        },
+        {
+          "name": "TurnNumber",
+          "type": "Number",
+          "value": "1"
+        },
+        {
+          "name": "GamePhase",
+          "type": "String",
+          "value": "select"
+        },
+        {
+          "name": "SelectedUnit",
+          "type": "String",
+          "value": ""
+        },
+        {
+          "name": "MoveMode",
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "name": "AIActionIndex",
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "name": "TotalAIUnits",
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "name": "PlayerUnits",
+          "type": "Number",
+          "value": "3"
+        },
+        {
+          "name": "AIUnits",
+          "type": "Number",
+          "value": "3"
+        },
+        {
+          "name": "GameOver",
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "name": "Winner",
+          "type": "String",
+          "value": ""
+        }
+      ],
+      "events": {
+        "events": [
+          {
+            "type": "Builtin::Comment",
+            "color": {
+              "r": 80,
+              "g": 180,
+              "b": 255,
+              "a": 255
+            },
+            "text": "GROUP 1: INITIALIZATION"
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::OnceTriggers",
+                "parameters": [
+                  "",
+                  ""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [
+              {
+                "type": "Builtin::SetSceneVariable",
+                "parameters": [
+                  "GamePhase",
+                  "=",
+                  "\"select\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetSceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "=",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "GoldDisplay",
+                  "=",
+                  "\"Gold: 200\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "TurnDisplay",
+                  "=",
+                  "\"Turn 1 - Your Turn\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "PhaseDisplay",
+                  "=",
+                  "\"Select a unit\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Hide",
+                "parameters": [
+                  "UnitInfoPanel",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Hide",
+                "parameters": [
+                  "HealthBarBG",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Hide",
+                "parameters": [
+                  "HealthBarFG",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Hide",
+                "parameters": [
+                  "SelectionMarker",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Hide",
+                "parameters": [
+                  "MoveIndicator",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Hide",
+                "parameters": [
+                  "AttackIndicator",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Show",
+                "parameters": [
+                  "EndTurnButton",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              }
+            ],
+            "subEvents": []
+          },
+          {
+            "type": "Builtin::Comment",
+            "color": {
+              "r": 80,
+              "g": 180,
+              "b": 255,
+              "a": 255
+            },
+            "text": "GROUP 2: GOLD GENERATION"
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::OnceTriggers",
+                "parameters": [
+                  "",
+                  ""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::ObjectVariable",
+                "parameters": [
+                  "Region",
+                  "Owner",
+                  "==",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "Gold",
+                  "+=",
+                  "ObjectGetVariable(\"Region\", \"GoldPerTurn\")"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              }
+            ],
+            "subEvents": []
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::OnceTriggers",
+                "parameters": [
+                  "",
+                  ""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::ObjectVariable",
+                "parameters": [
+                  "Region",
+                  "Owner",
+                  "==",
+                  "2"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "AIGold",
+                  "+=",
+                  "ObjectGetVariable(\"Region\", \"GoldPerTurn\")"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              }
+            ],
+            "subEvents": []
+          },
+          {
+            "type": "Builtin::Comment",
+            "color": {
+              "r": 80,
+              "g": 180,
+              "b": 255,
+              "a": 255
+            },
+            "text": "GROUP 3: TURN START - RESET UNITS"
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "==",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [],
+            "subEvents": [
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::OnceTriggers",
+                    "parameters": [
+                      "",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "Owner",
+                      "==",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "MovementLeft",
+                      "=",
+                      "ObjectGetVariable(\"Infantry\", \"MovementPoints\")"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "HasMoved",
+                      "=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "HasAttacked",
+                      "=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::OnceTriggers",
+                    "parameters": [
+                      "",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "Owner",
+                      "==",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "MovementLeft",
+                      "=",
+                      "ObjectGetVariable(\"Tank\", \"MovementPoints\")"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "HasMoved",
+                      "=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "HasAttacked",
+                      "=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::OnceTriggers",
+                    "parameters": [
+                      "",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "Owner",
+                      "==",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "MovementLeft",
+                      "=",
+                      "ObjectGetVariable(\"Aircraft\", \"MovementPoints\")"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "HasMoved",
+                      "=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "HasAttacked",
+                      "=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::OnceTriggers",
+                    "parameters": [
+                      "",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SetSceneVariable",
+                    "parameters": [
+                      "GamePhase",
+                      "=",
+                      "\"select\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetTexte",
+                    "parameters": [
+                      "PhaseDisplay",
+                      "=",
+                      "\"Select a unit\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Show",
+                    "parameters": [
+                      "EndTurnButton",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "SelectionMarker",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "UnitInfoPanel",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetTexte",
+                    "parameters": [
+                      "GoldDisplay",
+                      "=",
+                      "\"Gold: \" + VariableString(Gold)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetTexte",
+                    "parameters": [
+                      "TurnDisplay",
+                      "=",
+                      "\"Turn \" + VariableString(TurnNumber) + \" - Your Turn\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              }
+            ]
+          },
+          {
+            "type": "Builtin::Comment",
+            "color": {
+              "r": 80,
+              "g": 180,
+              "b": 255,
+              "a": 255
+            },
+            "text": "GROUP 4: UNIT SELECTION"
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "==",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "GamePhase",
+                  "==",
+                  "\"select\""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::ObjectVariable",
+                "parameters": [
+                  "Infantry",
+                  "Owner",
+                  "==",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::ObjectVariable",
+                "parameters": [
+                  "Infantry",
+                  "HasMoved",
+                  "==",
+                  "0"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisSurObjet",
+                "parameters": [
+                  "Infantry",
+                  "Souris",
+                  "",
+                  ""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisBouton",
+                "parameters": [
+                  "Gauche",
+                  "Released"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [
+              {
+                "type": "Builtin::SetSceneVariable",
+                "parameters": [
+                  "SelectedUnit",
+                  "=",
+                  "\"Infantry\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetSceneVariable",
+                "parameters": [
+                  "SelectedUnitType",
+                  "=",
+                  "ObjectGetVariable(\"Infantry\", \"UnitType\")"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetX",
+                "parameters": [
+                  "SelectionMarker",
+                  "=",
+                  "Object.X(Infantry)"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetY",
+                "parameters": [
+                  "SelectionMarker",
+                  "=",
+                  "Object.Y(Infantry)"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Show",
+                "parameters": [
+                  "SelectionMarker",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Show",
+                "parameters": [
+                  "UnitInfoPanel",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "UnitInfoName",
+                  "=",
+                  "\"Infantry\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "UnitInfoHP",
+                  "=",
+                  "\"HP: \" + VariableString(ObjectGetVariable(Infantry, Health)) + \"/\" + VariableString(ObjectGetVariable(Infantry, MaxHealth))"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "UnitInfoATK",
+                  "=",
+                  "\"ATK: \" + VariableString(ObjectGetVariable(Infantry, Attack)) + \"  DEF: \" + VariableString(ObjectGetVariable(Infantry, Defense))"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "UnitInfoMOV",
+                  "=",
+                  "\"MOV: \" + VariableString(ObjectGetVariable(Infantry, MovementLeft))"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetSceneVariable",
+                "parameters": [
+                  "GamePhase",
+                  "=",
+                  "\"selected\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "PhaseDisplay",
+                  "=",
+                  "\"Tap destination to move\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              }
+            ],
+            "subEvents": []
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "==",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "GamePhase",
+                  "==",
+                  "\"select\""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::ObjectVariable",
+                "parameters": [
+                  "Tank",
+                  "Owner",
+                  "==",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::ObjectVariable",
+                "parameters": [
+                  "Tank",
+                  "HasMoved",
+                  "==",
+                  "0"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisSurObjet",
+                "parameters": [
+                  "Tank",
+                  "Souris",
+                  "",
+                  ""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisBouton",
+                "parameters": [
+                  "Gauche",
+                  "Released"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [
+              {
+                "type": "Builtin::SetSceneVariable",
+                "parameters": [
+                  "SelectedUnit",
+                  "=",
+                  "\"Tank\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetSceneVariable",
+                "parameters": [
+                  "SelectedUnitType",
+                  "=",
+                  "ObjectGetVariable(\"Tank\", \"UnitType\")"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetX",
+                "parameters": [
+                  "SelectionMarker",
+                  "=",
+                  "Object.X(Tank)"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetY",
+                "parameters": [
+                  "SelectionMarker",
+                  "=",
+                  "Object.Y(Tank)"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Show",
+                "parameters": [
+                  "SelectionMarker",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Show",
+                "parameters": [
+                  "UnitInfoPanel",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "UnitInfoName",
+                  "=",
+                  "\"Tank\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "UnitInfoHP",
+                  "=",
+                  "\"HP: \" + VariableString(ObjectGetVariable(Tank, Health)) + \"/\" + VariableString(ObjectGetVariable(Tank, MaxHealth))"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "UnitInfoATK",
+                  "=",
+                  "\"ATK: \" + VariableString(ObjectGetVariable(Tank, Attack)) + \"  DEF: \" + VariableString(ObjectGetVariable(Tank, Defense))"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "UnitInfoMOV",
+                  "=",
+                  "\"MOV: \" + VariableString(ObjectGetVariable(Tank, MovementLeft))"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetSceneVariable",
+                "parameters": [
+                  "GamePhase",
+                  "=",
+                  "\"selected\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "PhaseDisplay",
+                  "=",
+                  "\"Tap destination to move\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              }
+            ],
+            "subEvents": []
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "==",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "GamePhase",
+                  "==",
+                  "\"select\""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::ObjectVariable",
+                "parameters": [
+                  "Aircraft",
+                  "Owner",
+                  "==",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::ObjectVariable",
+                "parameters": [
+                  "Aircraft",
+                  "HasMoved",
+                  "==",
+                  "0"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisSurObjet",
+                "parameters": [
+                  "Aircraft",
+                  "Souris",
+                  "",
+                  ""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisBouton",
+                "parameters": [
+                  "Gauche",
+                  "Released"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [
+              {
+                "type": "Builtin::SetSceneVariable",
+                "parameters": [
+                  "SelectedUnit",
+                  "=",
+                  "\"Aircraft\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetSceneVariable",
+                "parameters": [
+                  "SelectedUnitType",
+                  "=",
+                  "ObjectGetVariable(\"Aircraft\", \"UnitType\")"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetX",
+                "parameters": [
+                  "SelectionMarker",
+                  "=",
+                  "Object.X(Aircraft)"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetY",
+                "parameters": [
+                  "SelectionMarker",
+                  "=",
+                  "Object.Y(Aircraft)"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Show",
+                "parameters": [
+                  "SelectionMarker",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Show",
+                "parameters": [
+                  "UnitInfoPanel",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "UnitInfoName",
+                  "=",
+                  "\"Aircraft\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "UnitInfoHP",
+                  "=",
+                  "\"HP: \" + VariableString(ObjectGetVariable(Aircraft, Health)) + \"/\" + VariableString(ObjectGetVariable(Aircraft, MaxHealth))"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "UnitInfoATK",
+                  "=",
+                  "\"ATK: \" + VariableString(ObjectGetVariable(Aircraft, Attack)) + \"  DEF: \" + VariableString(ObjectGetVariable(Aircraft, Defense))"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "UnitInfoMOV",
+                  "=",
+                  "\"MOV: \" + VariableString(ObjectGetVariable(Aircraft, MovementLeft))"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetSceneVariable",
+                "parameters": [
+                  "GamePhase",
+                  "=",
+                  "\"selected\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "PhaseDisplay",
+                  "=",
+                  "\"Tap destination to move\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              }
+            ],
+            "subEvents": []
+          },
+          {
+            "type": "Builtin::Comment",
+            "color": {
+              "r": 80,
+              "g": 180,
+              "b": 255,
+              "a": 255
+            },
+            "text": "GROUP 5: MOVEMENT"
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "==",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "GamePhase",
+                  "==",
+                  "\"selected\""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisSurObjet",
+                "parameters": [
+                  "Region",
+                  "Souris",
+                  "",
+                  ""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisBouton",
+                "parameters": [
+                  "Gauche",
+                  "Released"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [
+              {
+                "type": "Builtin::SetX",
+                "parameters": [
+                  "Infantry",
+                  "=Object.X(Region) + 100"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetY",
+                "parameters": [
+                  "Infantry",
+                  "=Object.Y(Region) + 75"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetObjectVariable",
+                "parameters": [
+                  "Infantry",
+                  "MovementLeft",
+                  "=",
+                  "0"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetObjectVariable",
+                "parameters": [
+                  "Infantry",
+                  "HasMoved",
+                  "=",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Hide",
+                "parameters": [
+                  "SelectionMarker",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetSceneVariable",
+                "parameters": [
+                  "GamePhase",
+                  "=",
+                  "\"moved\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "PhaseDisplay",
+                  "=",
+                  "\"Select enemy to attack or tap elsewhere\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              }
+            ],
+            "subEvents": []
+          },
+          {
+            "type": "Builtin::Comment",
+            "color": {
+              "r": 80,
+              "g": 180,
+              "b": 255,
+              "a": 255
+            },
+            "text": "GROUP 6: COMBAT"
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "==",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "GamePhase",
+                  "==",
+                  "\"moved\""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisSurObjet",
+                "parameters": [
+                  "Infantry",
+                  "Souris",
+                  "",
+                  ""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisBouton",
+                "parameters": [
+                  "Gauche",
+                  "Released"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::ObjectVariable",
+                "parameters": [
+                  "Infantry",
+                  "Owner",
+                  "==",
+                  "2"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [],
+            "subEvents": [
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "SelectedUnit",
+                      "==",
+                      "\"Infantry\""
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "HasAttacked",
+                      "==",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "TempDamage",
+                      "=",
+                      "ObjectGetVariable(\"Infantry\", \"Attack\") * RandomFloat(0.8, 1.2)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "Health",
+                      "-=",
+                      "Variable(TempDamage)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Create",
+                    "parameters": [
+                      "DamageText",
+                      "Object.X(Infantry)",
+                      "Object.Y(Infantry) - 20",
+                      "UI"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "HasAttacked",
+                      "=",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "SelectionMarker",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "UnitInfoPanel",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetSceneVariable",
+                    "parameters": [
+                      "GamePhase",
+                      "=",
+                      "\"select\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetTexte",
+                    "parameters": [
+                      "PhaseDisplay",
+                      "=",
+                      "\"Select a unit\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "SelectedUnit",
+                      "==",
+                      "\"Tank\""
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "HasAttacked",
+                      "==",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "TempDamage",
+                      "=",
+                      "ObjectGetVariable(\"Tank\", \"Attack\") * RandomFloat(0.8, 1.2)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "Health",
+                      "-=",
+                      "Variable(TempDamage)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Create",
+                    "parameters": [
+                      "DamageText",
+                      "Object.X(Infantry)",
+                      "Object.Y(Infantry) - 20",
+                      "UI"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "HasAttacked",
+                      "=",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "SelectionMarker",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "UnitInfoPanel",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetSceneVariable",
+                    "parameters": [
+                      "GamePhase",
+                      "=",
+                      "\"select\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetTexte",
+                    "parameters": [
+                      "PhaseDisplay",
+                      "=",
+                      "\"Select a unit\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "SelectedUnit",
+                      "==",
+                      "\"Aircraft\""
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "HasAttacked",
+                      "==",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "TempDamage",
+                      "=",
+                      "ObjectGetVariable(\"Aircraft\", \"Attack\") * RandomFloat(0.8, 1.2)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "Health",
+                      "-=",
+                      "Variable(TempDamage)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Create",
+                    "parameters": [
+                      "DamageText",
+                      "Object.X(Infantry)",
+                      "Object.Y(Infantry) - 20",
+                      "UI"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "HasAttacked",
+                      "=",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "SelectionMarker",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "UnitInfoPanel",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetSceneVariable",
+                    "parameters": [
+                      "GamePhase",
+                      "=",
+                      "\"select\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetTexte",
+                    "parameters": [
+                      "PhaseDisplay",
+                      "=",
+                      "\"Select a unit\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "Health",
+                      "<=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::Delete",
+                    "parameters": [
+                      "Infantry",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Create",
+                    "parameters": [
+                      "ExplosionEffect",
+                      "Object.X(Infantry)",
+                      "Object.Y(Infantry)",
+                      "Base"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              }
+            ]
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "==",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "GamePhase",
+                  "==",
+                  "\"moved\""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisSurObjet",
+                "parameters": [
+                  "Tank",
+                  "Souris",
+                  "",
+                  ""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisBouton",
+                "parameters": [
+                  "Gauche",
+                  "Released"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::ObjectVariable",
+                "parameters": [
+                  "Tank",
+                  "Owner",
+                  "==",
+                  "2"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [],
+            "subEvents": [
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "SelectedUnit",
+                      "==",
+                      "\"Infantry\""
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "HasAttacked",
+                      "==",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "TempDamage",
+                      "=",
+                      "ObjectGetVariable(\"Infantry\", \"Attack\") * RandomFloat(0.8, 1.2)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "Health",
+                      "-=",
+                      "Variable(TempDamage)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Create",
+                    "parameters": [
+                      "DamageText",
+                      "Object.X(Tank)",
+                      "Object.Y(Tank) - 20",
+                      "UI"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "HasAttacked",
+                      "=",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "SelectionMarker",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "UnitInfoPanel",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetSceneVariable",
+                    "parameters": [
+                      "GamePhase",
+                      "=",
+                      "\"select\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetTexte",
+                    "parameters": [
+                      "PhaseDisplay",
+                      "=",
+                      "\"Select a unit\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "SelectedUnit",
+                      "==",
+                      "\"Tank\""
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "HasAttacked",
+                      "==",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "TempDamage",
+                      "=",
+                      "ObjectGetVariable(\"Tank\", \"Attack\") * RandomFloat(0.8, 1.2)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "Health",
+                      "-=",
+                      "Variable(TempDamage)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Create",
+                    "parameters": [
+                      "DamageText",
+                      "Object.X(Tank)",
+                      "Object.Y(Tank) - 20",
+                      "UI"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "HasAttacked",
+                      "=",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "SelectionMarker",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "UnitInfoPanel",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetSceneVariable",
+                    "parameters": [
+                      "GamePhase",
+                      "=",
+                      "\"select\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetTexte",
+                    "parameters": [
+                      "PhaseDisplay",
+                      "=",
+                      "\"Select a unit\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "SelectedUnit",
+                      "==",
+                      "\"Aircraft\""
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "HasAttacked",
+                      "==",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "TempDamage",
+                      "=",
+                      "ObjectGetVariable(\"Aircraft\", \"Attack\") * RandomFloat(0.8, 1.2)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "Health",
+                      "-=",
+                      "Variable(TempDamage)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Create",
+                    "parameters": [
+                      "DamageText",
+                      "Object.X(Tank)",
+                      "Object.Y(Tank) - 20",
+                      "UI"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "HasAttacked",
+                      "=",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "SelectionMarker",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "UnitInfoPanel",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetSceneVariable",
+                    "parameters": [
+                      "GamePhase",
+                      "=",
+                      "\"select\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetTexte",
+                    "parameters": [
+                      "PhaseDisplay",
+                      "=",
+                      "\"Select a unit\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "Health",
+                      "<=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::Delete",
+                    "parameters": [
+                      "Tank",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Create",
+                    "parameters": [
+                      "ExplosionEffect",
+                      "Object.X(Tank)",
+                      "Object.Y(Tank)",
+                      "Base"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              }
+            ]
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "==",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "GamePhase",
+                  "==",
+                  "\"moved\""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisSurObjet",
+                "parameters": [
+                  "Aircraft",
+                  "Souris",
+                  "",
+                  ""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisBouton",
+                "parameters": [
+                  "Gauche",
+                  "Released"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::ObjectVariable",
+                "parameters": [
+                  "Aircraft",
+                  "Owner",
+                  "==",
+                  "2"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [],
+            "subEvents": [
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "SelectedUnit",
+                      "==",
+                      "\"Infantry\""
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "HasAttacked",
+                      "==",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "TempDamage",
+                      "=",
+                      "ObjectGetVariable(\"Infantry\", \"Attack\") * RandomFloat(0.8, 1.2)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "Health",
+                      "-=",
+                      "Variable(TempDamage)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Create",
+                    "parameters": [
+                      "DamageText",
+                      "Object.X(Aircraft)",
+                      "Object.Y(Aircraft) - 20",
+                      "UI"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "HasAttacked",
+                      "=",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "SelectionMarker",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "UnitInfoPanel",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetSceneVariable",
+                    "parameters": [
+                      "GamePhase",
+                      "=",
+                      "\"select\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetTexte",
+                    "parameters": [
+                      "PhaseDisplay",
+                      "=",
+                      "\"Select a unit\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "SelectedUnit",
+                      "==",
+                      "\"Tank\""
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "HasAttacked",
+                      "==",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "TempDamage",
+                      "=",
+                      "ObjectGetVariable(\"Tank\", \"Attack\") * RandomFloat(0.8, 1.2)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "Health",
+                      "-=",
+                      "Variable(TempDamage)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Create",
+                    "parameters": [
+                      "DamageText",
+                      "Object.X(Aircraft)",
+                      "Object.Y(Aircraft) - 20",
+                      "UI"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "HasAttacked",
+                      "=",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "SelectionMarker",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "UnitInfoPanel",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetSceneVariable",
+                    "parameters": [
+                      "GamePhase",
+                      "=",
+                      "\"select\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetTexte",
+                    "parameters": [
+                      "PhaseDisplay",
+                      "=",
+                      "\"Select a unit\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "SelectedUnit",
+                      "==",
+                      "\"Aircraft\""
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "HasAttacked",
+                      "==",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "TempDamage",
+                      "=",
+                      "ObjectGetVariable(\"Aircraft\", \"Attack\") * RandomFloat(0.8, 1.2)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "Health",
+                      "-=",
+                      "Variable(TempDamage)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Create",
+                    "parameters": [
+                      "DamageText",
+                      "Object.X(Aircraft)",
+                      "Object.Y(Aircraft) - 20",
+                      "UI"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "HasAttacked",
+                      "=",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "SelectionMarker",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Hide",
+                    "parameters": [
+                      "UnitInfoPanel",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetSceneVariable",
+                    "parameters": [
+                      "GamePhase",
+                      "=",
+                      "\"select\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetTexte",
+                    "parameters": [
+                      "PhaseDisplay",
+                      "=",
+                      "\"Select a unit\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "Health",
+                      "<=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::Delete",
+                    "parameters": [
+                      "Aircraft",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Create",
+                    "parameters": [
+                      "ExplosionEffect",
+                      "Object.X(Aircraft)",
+                      "Object.Y(Aircraft)",
+                      "Base"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              }
+            ]
+          },
+          {
+            "type": "Builtin::Comment",
+            "color": {
+              "r": 80,
+              "g": 180,
+              "b": 255,
+              "a": 255
+            },
+            "text": "GROUP 7: END TURN"
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "==",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisSurObjet",
+                "parameters": [
+                  "EndTurnButton",
+                  "Souris",
+                  "",
+                  ""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisBouton",
+                "parameters": [
+                  "Gauche",
+                  "Released"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [
+              {
+                "type": "Builtin::SetSceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "=",
+                  "0"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Hide",
+                "parameters": [
+                  "EndTurnButton",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "TurnDisplay",
+                  "=",
+                  "\"AI Turn...\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "PhaseDisplay",
+                  "=",
+                  "\"AI is thinking...\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::ResetTimer",
+                "parameters": [
+                  "AIStartDelay",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "AIActionIndex",
+                  "=",
+                  "0"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              }
+            ],
+            "subEvents": []
+          },
+          {
+            "type": "Builtin::Comment",
+            "color": {
+              "r": 80,
+              "g": 180,
+              "b": 255,
+              "a": 255
+            },
+            "text": "GROUP 8: AI TURN - START"
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "==",
+                  "0"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::Timer",
+                "parameters": [
+                  "AIStartDelay",
+                  ">=",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [],
+            "subEvents": [
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "Owner",
+                      "==",
+                      "2"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "MovementLeft",
+                      "=",
+                      "ObjectGetVariable(\"Infantry\", \"MovementPoints\")"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "HasMoved",
+                      "=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "HasAttacked",
+                      "=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "Owner",
+                      "==",
+                      "2"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "MovementLeft",
+                      "=",
+                      "ObjectGetVariable(\"Tank\", \"MovementPoints\")"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "HasMoved",
+                      "=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "HasAttacked",
+                      "=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "Owner",
+                      "==",
+                      "2"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "MovementLeft",
+                      "=",
+                      "ObjectGetVariable(\"Aircraft\", \"MovementPoints\")"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "HasMoved",
+                      "=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "HasAttacked",
+                      "=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [],
+                "actions": [
+                  {
+                    "type": "Builtin::SceneVariable",
+                    "parameters": [
+                      "AIActionIndex",
+                      "=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::ResetTimer",
+                    "parameters": [
+                      "AIActionDelay",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              }
+            ]
+          },
+          {
+            "type": "Builtin::Comment",
+            "color": {
+              "r": 80,
+              "g": 180,
+              "b": 255,
+              "a": 255
+            },
+            "text": "GROUP 9: AI TURN - ACTIONS"
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "==",
+                  "0"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "GameOver",
+                  "==",
+                  "0"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [],
+            "subEvents": [
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::Timer",
+                    "parameters": [
+                      "AIActionDelay",
+                      ">=",
+                      "0.5"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "Owner",
+                      "==",
+                      "2"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "HasMoved",
+                      "==",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::MettreAutour",
+                    "parameters": [
+                      "Infantry",
+                      "Object.X(Infantry) + RandomInRange(-100, 100)",
+                      "Object.Y(Infantry) + RandomInRange(-75, 75)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "HasMoved",
+                      "=",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "MovementLeft",
+                      "=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::ResetTimer",
+                    "parameters": [
+                      "AIActionDelay",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::Timer",
+                    "parameters": [
+                      "AIActionDelay",
+                      ">=",
+                      "0.5"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "Owner",
+                      "==",
+                      "2"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "HasMoved",
+                      "==",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::MettreAutour",
+                    "parameters": [
+                      "Tank",
+                      "Object.X(Tank) + RandomInRange(-100, 100)",
+                      "Object.Y(Tank) + RandomInRange(-75, 75)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "HasMoved",
+                      "=",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "MovementLeft",
+                      "=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::ResetTimer",
+                    "parameters": [
+                      "AIActionDelay",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::Timer",
+                    "parameters": [
+                      "AIActionDelay",
+                      ">=",
+                      "0.5"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "Owner",
+                      "==",
+                      "2"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "HasMoved",
+                      "==",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::MettreAutour",
+                    "parameters": [
+                      "Aircraft",
+                      "Object.X(Aircraft) + RandomInRange(-100, 100)",
+                      "Object.Y(Aircraft) + RandomInRange(-75, 75)"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "HasMoved",
+                      "=",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "MovementLeft",
+                      "=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::ResetTimer",
+                    "parameters": [
+                      "AIActionDelay",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::Timer",
+                    "parameters": [
+                      "AIActionDelay",
+                      ">=",
+                      "0.8"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "Owner",
+                      "==",
+                      "2"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "HasAttacked",
+                      "==",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [],
+                "subEvents": [
+                  {
+                    "type": "Builtin::Standard",
+                    "conditions": [
+                      {
+                        "type": "Builtin::ObjectVariable",
+                        "parameters": [
+                          "Infantry",
+                          "Owner",
+                          "==",
+                          "1"
+                        ],
+                        "parametersObjects": {},
+                        "subConditions": []
+                      }
+                    ],
+                    "actions": [
+                      {
+                        "type": "Builtin::SceneVariable",
+                        "parameters": [
+                          "TempDamage",
+                          "=",
+                          "ObjectGetVariable(\"Infantry\", \"Attack\") * RandomFloat(0.8, 1.2)"
+                        ],
+                        "parametersObjects": {},
+                        "forceSequential": false
+                      },
+                      {
+                        "type": "Builtin::SetObjectVariable",
+                        "parameters": [
+                          "Infantry",
+                          "Health",
+                          "-=",
+                          "Variable(TempDamage)"
+                        ],
+                        "parametersObjects": {},
+                        "forceSequential": false
+                      },
+                      {
+                        "type": "Builtin::Create",
+                        "parameters": [
+                          "DamageText",
+                          "Object.X(Infantry)",
+                          "Object.Y(Infantry) - 20",
+                          "UI"
+                        ],
+                        "parametersObjects": {},
+                        "forceSequential": false
+                      },
+                      {
+                        "type": "Builtin::SetObjectVariable",
+                        "parameters": [
+                          "Infantry",
+                          "HasAttacked",
+                          "=",
+                          "1"
+                        ],
+                        "parametersObjects": {},
+                        "forceSequential": false
+                      },
+                      {
+                        "type": "Builtin::ResetTimer",
+                        "parameters": [
+                          "AIActionDelay",
+                          ""
+                        ],
+                        "parametersObjects": {},
+                        "forceSequential": false
+                      }
+                    ],
+                    "subEvents": []
+                  }
+                ]
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::Timer",
+                    "parameters": [
+                      "AIActionDelay",
+                      ">=",
+                      "0.8"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "Owner",
+                      "==",
+                      "2"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "HasAttacked",
+                      "==",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [],
+                "subEvents": [
+                  {
+                    "type": "Builtin::Standard",
+                    "conditions": [
+                      {
+                        "type": "Builtin::ObjectVariable",
+                        "parameters": [
+                          "Tank",
+                          "Owner",
+                          "==",
+                          "1"
+                        ],
+                        "parametersObjects": {},
+                        "subConditions": []
+                      }
+                    ],
+                    "actions": [
+                      {
+                        "type": "Builtin::SceneVariable",
+                        "parameters": [
+                          "TempDamage",
+                          "=",
+                          "ObjectGetVariable(\"Tank\", \"Attack\") * RandomFloat(0.8, 1.2)"
+                        ],
+                        "parametersObjects": {},
+                        "forceSequential": false
+                      },
+                      {
+                        "type": "Builtin::SetObjectVariable",
+                        "parameters": [
+                          "Tank",
+                          "Health",
+                          "-=",
+                          "Variable(TempDamage)"
+                        ],
+                        "parametersObjects": {},
+                        "forceSequential": false
+                      },
+                      {
+                        "type": "Builtin::Create",
+                        "parameters": [
+                          "DamageText",
+                          "Object.X(Tank)",
+                          "Object.Y(Tank) - 20",
+                          "UI"
+                        ],
+                        "parametersObjects": {},
+                        "forceSequential": false
+                      },
+                      {
+                        "type": "Builtin::SetObjectVariable",
+                        "parameters": [
+                          "Tank",
+                          "HasAttacked",
+                          "=",
+                          "1"
+                        ],
+                        "parametersObjects": {},
+                        "forceSequential": false
+                      },
+                      {
+                        "type": "Builtin::ResetTimer",
+                        "parameters": [
+                          "AIActionDelay",
+                          ""
+                        ],
+                        "parametersObjects": {},
+                        "forceSequential": false
+                      }
+                    ],
+                    "subEvents": []
+                  }
+                ]
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "Owner",
+                      "==",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Infantry",
+                      "Health",
+                      "<=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::Delete",
+                    "parameters": [
+                      "Infantry",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Create",
+                    "parameters": [
+                      "ExplosionEffect",
+                      "Object.X(Infantry)",
+                      "Object.Y(Infantry)",
+                      "Base"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "Owner",
+                      "==",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Tank",
+                      "Health",
+                      "<=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::Delete",
+                    "parameters": [
+                      "Tank",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Create",
+                    "parameters": [
+                      "ExplosionEffect",
+                      "Object.X(Tank)",
+                      "Object.Y(Tank)",
+                      "Base"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "Owner",
+                      "==",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::ObjectVariable",
+                    "parameters": [
+                      "Aircraft",
+                      "Health",
+                      "<=",
+                      "0"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::Delete",
+                    "parameters": [
+                      "Aircraft",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::Create",
+                    "parameters": [
+                      "ExplosionEffect",
+                      "Object.X(Aircraft)",
+                      "Object.Y(Aircraft)",
+                      "Base"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              }
+            ]
+          },
+          {
+            "type": "Builtin::Comment",
+            "color": {
+              "r": 80,
+              "g": 180,
+              "b": 255,
+              "a": 255
+            },
+            "text": "GROUP 10: AI TURN - END"
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "==",
+                  "0"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::Timer",
+                "parameters": [
+                  "AIStartDelay",
+                  ">=",
+                  "3"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "GameOver",
+                  "==",
+                  "0"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "TurnNumber",
+                  "+=",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetSceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "=",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Show",
+                "parameters": [
+                  "EndTurnButton",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "TurnDisplay",
+                  "=",
+                  "\"Turn \" + VariableString(TurnNumber) + \" - Your Turn\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "PhaseDisplay",
+                  "=",
+                  "\"Select a unit\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::ResetTimer",
+                "parameters": [
+                  "AIStartDelay",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              }
+            ],
+            "subEvents": []
+          },
+          {
+            "type": "Builtin::Comment",
+            "color": {
+              "r": 80,
+              "g": 180,
+              "b": 255,
+              "a": 255
+            },
+            "text": "GROUP 11: DESELECTION"
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "==",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "GamePhase",
+                  "==",
+                  "\"selected\""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisBouton",
+                "parameters": [
+                  "Gauche",
+                  "Released"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisSurObjet",
+                "parameters": [
+                  "Region",
+                  "Souris",
+                  "",
+                  ""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [
+              {
+                "type": "Builtin::Hide",
+                "parameters": [
+                  "SelectionMarker",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Hide",
+                "parameters": [
+                  "UnitInfoPanel",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetSceneVariable",
+                "parameters": [
+                  "GamePhase",
+                  "=",
+                  "\"select\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "PhaseDisplay",
+                  "=",
+                  "\"Select a unit\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              }
+            ],
+            "subEvents": []
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "PlayerTurn",
+                  "==",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "GamePhase",
+                  "==",
+                  "\"moved\""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisBouton",
+                "parameters": [
+                  "Gauche",
+                  "Released"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              },
+              {
+                "type": "Builtin::SourisSurObjet",
+                "parameters": [
+                  "Region",
+                  "Souris",
+                  "",
+                  ""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [
+              {
+                "type": "Builtin::Hide",
+                "parameters": [
+                  "SelectionMarker",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Hide",
+                "parameters": [
+                  "UnitInfoPanel",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetSceneVariable",
+                "parameters": [
+                  "GamePhase",
+                  "=",
+                  "\"select\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "PhaseDisplay",
+                  "=",
+                  "\"Select a unit\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              }
+            ],
+            "subEvents": []
+          },
+          {
+            "type": "Builtin::Comment",
+            "color": {
+              "r": 80,
+              "g": 180,
+              "b": 255,
+              "a": 255
+            },
+            "text": "GROUP 12: UI UPDATES"
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::Always",
+                "parameters": [
+                  "",
+                  ""
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [],
+            "subEvents": [
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::Always",
+                    "parameters": [
+                      "",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SetX",
+                    "parameters": [
+                      "HealthBarBG",
+                      "=Object.X(Infantry) - 20"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetY",
+                    "parameters": [
+                      "HealthBarBG",
+                      "=Object.Y(Infantry) - 15"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::MettreTaille",
+                    "parameters": [
+                      "HealthBarFG",
+                      "=100 * ObjectGetVariable(\"Infantry\", \"Health\") / ObjectGetVariable(\"Infantry\", \"MaxHealth\")",
+                      "=10"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::Always",
+                    "parameters": [
+                      "",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SetX",
+                    "parameters": [
+                      "HealthBarBG",
+                      "=Object.X(Tank) - 20"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetY",
+                    "parameters": [
+                      "HealthBarBG",
+                      "=Object.Y(Tank) - 15"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::MettreTaille",
+                    "parameters": [
+                      "HealthBarFG",
+                      "=100 * ObjectGetVariable(\"Tank\", \"Health\") / ObjectGetVariable(\"Tank\", \"MaxHealth\")",
+                      "=10"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::Always",
+                    "parameters": [
+                      "",
+                      ""
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SetX",
+                    "parameters": [
+                      "HealthBarBG",
+                      "=Object.X(Aircraft) - 20"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetY",
+                    "parameters": [
+                      "HealthBarBG",
+                      "=Object.Y(Aircraft) - 15"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::MettreTaille",
+                    "parameters": [
+                      "HealthBarFG",
+                      "=100 * ObjectGetVariable(\"Aircraft\", \"Health\") / ObjectGetVariable(\"Aircraft\", \"MaxHealth\")",
+                      "=10"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              }
+            ]
+          },
+          {
+            "type": "Builtin::Comment",
+            "color": {
+              "r": 80,
+              "g": 180,
+              "b": 255,
+              "a": 255
+            },
+            "text": "GROUP 13: GAME OVER"
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "GameOver",
+                  "==",
+                  "0"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [],
+            "subEvents": [
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::NoObjectsWithCondition",
+                    "parameters": [
+                      "Infantry",
+                      "Owner == 2"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::NoObjectsWithCondition",
+                    "parameters": [
+                      "Tank",
+                      "Owner == 2"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::NoObjectsWithCondition",
+                    "parameters": [
+                      "Aircraft",
+                      "Owner == 2"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SetSceneVariable",
+                    "parameters": [
+                      "GameOver",
+                      "=",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetSceneVariable",
+                    "parameters": [
+                      "Winner",
+                      "=",
+                      "\"Player\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              },
+              {
+                "type": "Builtin::Standard",
+                "conditions": [
+                  {
+                    "type": "Builtin::NoObjectsWithCondition",
+                    "parameters": [
+                      "Infantry",
+                      "Owner == 1"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::NoObjectsWithCondition",
+                    "parameters": [
+                      "Tank",
+                      "Owner == 1"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  },
+                  {
+                    "type": "Builtin::NoObjectsWithCondition",
+                    "parameters": [
+                      "Aircraft",
+                      "Owner == 1"
+                    ],
+                    "parametersObjects": {},
+                    "subConditions": []
+                  }
+                ],
+                "actions": [
+                  {
+                    "type": "Builtin::SetSceneVariable",
+                    "parameters": [
+                      "GameOver",
+                      "=",
+                      "1"
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  },
+                  {
+                    "type": "Builtin::SetSceneVariable",
+                    "parameters": [
+                      "Winner",
+                      "=",
+                      "\"AI\""
+                    ],
+                    "parametersObjects": {},
+                    "forceSequential": false
+                  }
+                ],
+                "subEvents": []
+              }
+            ]
+          },
+          {
+            "type": "Builtin::Standard",
+            "conditions": [
+              {
+                "type": "Builtin::SceneVariable",
+                "parameters": [
+                  "GameOver",
+                  "==",
+                  "1"
+                ],
+                "parametersObjects": {},
+                "subConditions": []
+              }
+            ],
+            "actions": [
+              {
+                "type": "Builtin::Show",
+                "parameters": [
+                  "GameOverlay",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::SetTexte",
+                "parameters": [
+                  "PhaseDisplay",
+                  "=VariableString(Winner) + \" Wins!\""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Hide",
+                "parameters": [
+                  "EndTurnButton",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Hide",
+                "parameters": [
+                  "SelectionMarker",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              },
+              {
+                "type": "Builtin::Hide",
+                "parameters": [
+                  "UnitInfoPanel",
+                  ""
+                ],
+                "parametersObjects": {},
+                "forceSequential": false
+              }
+            ],
+            "subEvents": []
+          }
+        ],
+        "groups": [],
+        "enabled": true
+      },
+      "layers": [
+        {
+          "name": "Base",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": false,
+              "defaultViewport": false,
+              "viewport1": false,
+              "viewport2": false,
+              "viewport3": false,
+              "viewport4": false,
+              "viewport5": false,
+              "viewport6": false,
+              "viewport7": false,
+              "viewport8": false
+            }
+          ],
+          "effects": [],
+          "ambientLightColorR": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorB": 200,
+          "isLightingLayer": false,
+          "followBaseLayerCamera": false
+        },
+        {
+          "name": "UI",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": false,
+              "defaultViewport": false,
+              "viewport1": false,
+              "viewport2": false,
+              "viewport3": false,
+              "viewport4": false,
+              "viewport5": false,
+              "viewport6": false,
+              "viewport7": false,
+              "viewport8": false
+            }
+          ],
+          "effects": [],
+          "ambientLightColorR": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorB": 200,
+          "isLightingLayer": false,
+          "followBaseLayerCamera": false
+        }
+      ],
+      "properties": {
+        "windowWidth": 1280,
+        "windowHeight": 720,
+        "title": "World Conqueror Strategy",
+        "gradientTopColor": {
+          "b": 62,
+          "g": 45,
+          "r": 42
+        },
+        "gradientBottomColor": {
+          "b": 62,
+          "g": 45,
+          "r": 42
+        },
+        "enable3DCursor": false,
+        "projection": ""
+      },
+      "objectGroups": {
+        "objectGroups": []
+      },
+      "externalLayouts": []
+    }
+  ],
+  "objects": [],
+  "properties": {
+    "adaptGameResolutionAtRuntime": false,
+    "description": "Turn-based strategy game inspired by World Conqueror 4",
+    "folderProject": false,
+    "orientation": "landscape",
+    "packageName": "com.worldconqueror.strategy",
+    "projectFile": "",
+    "projectUserId": "",
+    "scaleMode": "adaptWidth",
+    "shootOnClick": false,
+    "sizeOnStartupMode": "",
+    "title": "World Conqueror Strategy",
+    "version": "4.0.145",
+    "windowHeight": 720,
+    "windowWidth": 1280,
+    "author": "",
+    "copyright1": "",
+    "extensionProperties": [],
+    "loadingScreen": "",
+    "icons": "",
+    "gamepadSupport": false,
+    "useDeprecatedLowResObserver": false
+  },
+  "resources": {
+    "resources": []
+  },
+  "usedExtensions": {
+    "items": []
+  },
+  "externalEvents": [],
+  "eventsFunctions": {
+    "eventsFunctions": [],
+    "eventsFunctionsExtension": "",
+    "layout": ""
+  },
+  "eventsFunctionsExtensions": {
+    "items": []
+  },
+  "externalLayouts": [],
+  "objectGroups": {
+    "layout": [],
+    "global": []
+  }
+}
